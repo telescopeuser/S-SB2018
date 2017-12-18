@@ -29,6 +29,14 @@ sqrt(25)
 rep("hi!", times = 20)
 
 ## Using a Package in R
-library(help='car')
-library(help="rattle")
+install.packages("car")
+library(help="car")
+
+library("lattice")
+library(help="lattice")
+help(countourplot)
+??countourplot
+example(contourplot)
+
+## chooseCRANmirror()
 
