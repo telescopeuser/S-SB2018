@@ -4,6 +4,15 @@
 
 ##############################
 
+###########################################################
+# working directory
+###########################################################
+getwd()
+#setwd("/home/iss-user/Desktop/workshop")
+setwd("/media/sf_vm_shared_folder/my_github_repo/S-SB2018/Day1-2/R")
+getwd()
+
+
 #Create a vector  with the c() function.
 
 age = c(32, 45, 25, 39, 99)
@@ -91,7 +100,7 @@ leadership$country = factor(leadership$country)
 
 # copy text data file to your working directory
 # import data from a space-delimited text file
-leadershipTXT = read.table("../data/data/leadership.txt", header=TRUE, sep=' ', stringsAsFactors=FALSE)
+leadershipTXT = read.table("./leadership.txt", header=TRUE, sep=' ', stringsAsFactors=FALSE)
 #make sure the path is correct and corresponding to the workig directory set
 
 # copy csv data file to your working directory
@@ -136,4 +145,3 @@ detach(leadership)
 leadershipSubset = subset(leadership, leadership$country=="UK", select=q1:q5)
 
 leadershipSubset
-
