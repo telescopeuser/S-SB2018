@@ -2,6 +2,14 @@
 ###### DATA PREP WORKSHOP #####
 ###############################
 
+###########################################################
+# working directory
+###########################################################
+getwd()
+#setwd("/home/iss-user/Desktop/workshop")
+setwd("/media/sf_vm_shared_folder/my_github_repo/S-SB2018/Day1-2/R")
+getwd()
+
 #install.packages("dplyr")
 # above installation required if not installed earlier
 
@@ -11,6 +19,9 @@ library(dplyr)
 GSS2012 = read.csv("GSS2012.csv")
 head(GSS2012)  # display the first few lines and see the actual data
 names(GSS2012) # display variable names
+nrow(GSS2012) # total number of records
+
+# summary(GSS2012) # quick summary
 
 #############################################
 #
