@@ -15,7 +15,7 @@ country[2:4] # extract the 2nd – 4th elements
 x <- c(2, 1, 3)
 2 + x
 print(x)
-x 1
+x > 1
 # Recycling – When two vectors have different lengths, the elements of the shorter vector may be recycled.
 # Typically a Warning is issued when this happens.
 # For some functions, an error results.

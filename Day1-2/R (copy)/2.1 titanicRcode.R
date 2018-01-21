@@ -9,7 +9,7 @@
 ###########################################################
 getwd()
 #setwd("/home/iss-user/Desktop/workshop")
-setwd("/media/sf_iss-vm-vbox-sf/github/S-SB2018/Day1-2/R")
+setwd("/media/sf_vm_shared_folder/my_github_repo/S-SB2018/Day1-2/R")
 getwd()
 
 ##############################
@@ -154,4 +154,3 @@ facetChart + theme_gray()
 #######################################################
 
 detach(t)
-
