@@ -39,7 +39,7 @@ x > 1
 
 x + c(1, 2)
 
-#Create a data frame with the data.frame() function:
+# Create a data frame with the data.frame() function:
 # create a vector for each column
 
 manager = c(1,2,3,4,5)
@@ -91,7 +91,7 @@ leadership$country = factor(leadership$country)
 
 # copy text data file to your working directory
 # import data from a space-delimited text file
-leadershipTXT = read.table("../data/data/leadership.txt", header=TRUE, sep=' ', stringsAsFactors=FALSE)
+leadershipTXT = read.table("leadership.txt", header=TRUE, sep=' ', stringsAsFactors=FALSE)
 #make sure the path is correct and corresponding to the workig directory set
 
 # copy csv data file to your working directory
