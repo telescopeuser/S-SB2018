@@ -1,3 +1,6 @@
+## import data
+BondFunds <- read.csv("BondFunds.csv")
+
 attach(BondFunds)
 
 ## construct a q-q plot
