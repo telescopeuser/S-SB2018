@@ -1,14 +1,16 @@
-getwd()
-setwd("/media/sf_vm_shared_folder/git_sync_master/S-SB2018/telescopeuser/R-2018-01-22")
-getwd()
-
 ##############################
 
 ######   T I T A N I C   #####
 
 ##############################
 
-
+###########################################################
+# working directory
+###########################################################
+getwd()
+#setwd("/home/iss-user/Desktop/workshop")
+setwd("/media/sf_iss-vm-vbox-sf/github/S-SB2018/Day1-2/R")
+getwd()
 
 ##############################
 ###### BASIC STEPS BEGIN #####
@@ -19,11 +21,8 @@ t = read.csv('titanic3.csv')
 
 t
 attach(t)
+# help('attach')
 summary(t)
-length(t$pclass)
-
-# find unique valuse in each column in dataframe
-rapply(t,function(x)length(unique(x)))
 
 t$pclass = factor(t$pclass)
 t$survived = factor(t$survived)
@@ -31,6 +30,13 @@ t$gender = factor(t$sex)
 
 summary(t)
 #you could also use str(t)
+
+# find missing values in age
+table(is.na(t$age))
+
+# remove records with missing age
+t = t[complete.cases(t$age),]
+nrow(t) # total number of valid records
 
 library(ggplot2)
 
@@ -53,9 +59,9 @@ survivedBar = ggplot(t, aes(x=survived)) + geom_bar()
 survivedLabels = labs(x= "survival", y= "Number of Passengers", title = "Survival Rate", subtitle = "On the titanic")
 survivedBar + survivedLabels
 
+ggplot(t, aes(x=age)) + geom_histogram(binwidth = 30)
 ggplot(t, aes(x=age)) + geom_histogram(binwidth = 20)
 ggplot(t, aes(x=age)) + geom_histogram(binwidth = 10)
-ggplot(t, aes(x=age)) + geom_histogram(binwidth = 30)
 
 #reusable age histogram Object
 ageHistogram5 = ggplot(t, aes(x=age)) + geom_histogram(binwidth = 5)
@@ -134,7 +140,6 @@ classSurvivalBar + survivalRateTitle
 
 ageSurvivalHistogram15+ facet_grid(gender~pclass)
 
-
 facetChart = ageSurvivalHistogram15+ facet_grid(gender~pclass)+ labs(title="Titanic Survival Rates across categories") 
 
 facetChart
@@ -149,3 +154,4 @@ facetChart + theme_gray()
 #######################################################
 
 detach(t)
+

@@ -4,6 +4,7 @@ Cola = read.csv("Cola.csv")
 
 attach(Cola)
 
+Cola
 ## visualise the sample data
 boxplot(Normal, EndAisle, names=c("Normal", "End-Aisle"),
         ylab="Cola Sales Volume (Number of Cases)",
@@ -24,7 +25,6 @@ var.test(x=Normal, y=EndAisle)
 
 ## t test
 t.test(Normal, EndAisle, var.equal=TRUE)
-
 
 ## F test
 var.test(Normal, EndAisle)
