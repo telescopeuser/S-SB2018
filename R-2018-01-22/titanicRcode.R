@@ -45,6 +45,7 @@ library(ggplot2)
 
 ggplot(t, aes(x=survived)) + geom_bar()
 ggplot(t, aes(x=age)) + geom_bar()
+ggplot(t, aes(x=age)) + geom_bar(binwidth = 5)
 ggplot(t, aes(x=gender)) + geom_bar()
 ggplot(t, aes(x=pclass)) + geom_bar()
 ageHistogram = ggplot(t, aes(x=age)) + geom_histogram()
@@ -86,15 +87,18 @@ classBar + basicTitle
 
 
 
+
 ####################################################
 ## USE BOXPLOTS TO UNDERSTAND DISTRIBUTIONS BEGIN ##
 
 ggplot(t, aes(gender,age)) + geom_boxplot()
 ggplot(t, aes(pclass,age)) + geom_boxplot()
 
+ggplot(t, aes(pclass,fare)) + geom_boxplot()
+ggplot(t, aes(survived,age)) + geom_boxplot()
+
 ## USE BOXPLOTS TO UNDERSTAND DISTRIBUTIONS END ####
 ####################################################
-
 
 
 
@@ -106,7 +110,7 @@ genderSurvivalBar = ggplot(t, aes(x=gender, fill= survived)) + geom_bar()
 genderSurvivalBar
 
 # Reusable age stacked bar object
-ageSurvivalHistogram15 = ggplot(t, aes(x=age, fill= survived)) + geom_histogram(binwidth = 15)
+ageSurvivalHistogram15 = ggplot(t, aes(x=age, fill= survived)) + geom_histogram(binwidth = 20)
 ageSurvivalHistogram15
 
 # Reusable class stacked bar object
@@ -115,7 +119,6 @@ classSurvivalBar
 
 #Reusable Survival Rate Title Object
 survivalRateTitle = labs(title = "Titanic Survival Rates")
-
 
 #chaining reusable objects
 genderSurvivalBar + survivalRateTitle
@@ -131,9 +134,7 @@ classSurvivalBar + survivalRateTitle
 #######################################################
 ## FACETING TO COMBINE ALL DATA INTO ONE CHART BEGIN ##
 
-
 ageSurvivalHistogram15+ facet_grid(gender~pclass)
-
 
 facetChart = ageSurvivalHistogram15+ facet_grid(gender~pclass)+ labs(title="Titanic Survival Rates across categories") 
 
@@ -144,8 +145,26 @@ facetChart + theme_dark()
 facetChart + theme_classic()
 facetChart + theme_gray()
 
+ageSurvivalHistogram15+ facet_grid(gender~embarked)
 
 ## FACETING TO COMBINE ALL DATA INTO ONE CHART END ####
 #######################################################
+
+
+################################## 
+## OTHER TYPE OF CHARTS BEGIN ####
+
+# fare: ticket price
+ggplot(t, aes(x=fare, fill= survived)) + geom_histogram(binwidth = 50)
+
+# What the gender propotion in passenger class?
+ggplot(t, aes(gender,pclass)) + geom_count()
+
+# which class survived more?
+ggplot(t, aes(survived,pclass)) + geom_count()
+
+## OTHER TYPE OF CHARTS END ####
+################################ 
+
 
 detach(t)

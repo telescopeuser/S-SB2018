@@ -1,5 +1,5 @@
 getwd()
-setwd("/media/sf_vm_shared_folder/my_github_repo/S-SB2018/telescopeuser/R-2018-01-22/")
+setwd("/media/sf_vm_shared_folder/git_sync_master/S-SB2018/telescopeuser/R-2018-01-22/")
 getwd()
 
 # install.packages('ggplot2')
