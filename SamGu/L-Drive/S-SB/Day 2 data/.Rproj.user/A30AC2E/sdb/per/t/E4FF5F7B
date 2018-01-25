@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "attach(BondFunds)\n\n## construct a q-q plot\nqqnorm(Return2009, col=\"blue\", xlab=\"z Value\", \n       ylab=\"Return2009\")\nqqline(Return2009, col=\"red\", lwd=2)\n\ndetach(BondFunds)",
+    "created" : 1484012983440.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "26500219",
+    "id" : "E4FF5F7B",
+    "lastKnownWriteTime" : 1372391346,
+    "last_content_update" : 1372391346,
+    "path" : "L:/S-SB/Workshop/Weijian/Day 2/BondFunds_QQPlot.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

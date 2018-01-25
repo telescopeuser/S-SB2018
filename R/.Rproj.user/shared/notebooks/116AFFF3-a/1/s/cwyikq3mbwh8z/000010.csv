@@ -1,0 +1,4 @@
+"0","library(ggplot2)"
+"0","t = read.csv(""titanic3.csv"")"
+"0","#plot(t)"
+"0","ggplot(t, aes(age)) + geom_histogram(binwidth = 10)"

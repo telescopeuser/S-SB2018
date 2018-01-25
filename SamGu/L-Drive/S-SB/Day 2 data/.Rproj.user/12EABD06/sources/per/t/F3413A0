@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1516589642449.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2934860938",
+    "id" : "F3413A0",
+    "lastKnownWriteTime" : 1516611387,
+    "last_content_update" : 1516611388281,
+    "path" : "/media/sf_vm_shared_folder/my_github_repo/S-SB2018/telescopeuser/setwd/setwd.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

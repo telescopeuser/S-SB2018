@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "## import data\nBondFunds <- read.csv(\"BondFunds.csv\")\n\nattach(BondFunds)\n\n## histogram with normal curve\nhist(Return2009, breaks=15, prob=T)\ncurve(dnorm(x, mean(Return2009), sd(Return2009)),\n      add=TRUE, col=\"red\", lwd=2)\nlines(density(Return2009), col=\"blue\")\n\ndetach(BondFunds)",
+    "created" : 1484012974486.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4225025161",
+    "id" : "421D441A",
+    "lastKnownWriteTime" : 1372391572,
+    "last_content_update" : 1372391572,
+    "path" : "L:/S-SB/Workshop/Weijian/Day 2/BondFunds_Hist.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

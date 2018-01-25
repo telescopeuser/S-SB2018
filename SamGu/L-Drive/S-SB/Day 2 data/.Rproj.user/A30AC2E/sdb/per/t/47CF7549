@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# create a vector for each column\nmanager <- c(1, 2, 3, 4, 5)\ncountry <- c(\"US\", \"US\", \"UK\", \"UK\", \"UK\")\ngender <- c(\"M\",\"F\",\"F\",\"M\",\"F\")\nage <- c(32, 45, 25, 39, 99)\nq1 <- c(5, 3, 3, 3, 2)",
+    "created" : 1484013947686.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1979222765",
+    "id" : "47CF7549",
+    "lastKnownWriteTime" : 1484015415,
+    "last_content_update" : 1484015415874,
+    "path" : "L:/S-SB/Workshop/Weijian/Day 2/day2script.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
