@@ -1,3 +1,7 @@
+getwd()
+# setwd("xxxxx")
+# getwd()
+
 ## import data
 MShopping = read.csv("MShopping.csv")
 

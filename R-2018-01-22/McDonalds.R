@@ -1,3 +1,7 @@
+getwd()
+# setwd("xxxxx")
+# getwd()
+
 ## import data
 McDonalds = read.csv("McDonalds.csv")
 # McDonalds = read.csv("McDonalds2.csv")

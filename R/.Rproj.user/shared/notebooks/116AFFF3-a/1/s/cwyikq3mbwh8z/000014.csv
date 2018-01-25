@@ -1,1 +1,0 @@
-"0","ggplot(t, aes(age)) + geom_histogram(binwidth = 12)"
